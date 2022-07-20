@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
 	<PackAsTool>true</PackAsTool>
-	<ToolCommandName>whois</ToolCommandName>
+	<ToolCommandName>exec</ToolCommandName>
 	<PackageOutputPath>./nupkg</PackageOutputPath>
 	<StartupObject>CodingWithCalvin.Exec.Console.Program</StartupObject>
   </PropertyGroup>
