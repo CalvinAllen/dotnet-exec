@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CodingWithCalvin.Exec.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "run"
+    }
+  }
+}

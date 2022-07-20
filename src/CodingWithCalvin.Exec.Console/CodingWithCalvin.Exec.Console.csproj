@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+
+	<PackAsTool>true</PackAsTool>
+	<ToolCommandName>whois</ToolCommandName>
+	<PackageOutputPath>./nupkg</PackageOutputPath>
+	<StartupObject>CodingWithCalvin.Exec.Console.Program</StartupObject>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>CodingWithCalvin.Exec</PackageId>
+		<PackageVersion>1.0.0</PackageVersion>
+		<Authors>Calvin A. Allen</Authors>
+		<Description>A little global tool to run commandline based scripts from a localy manifest file.</Description>
+		<RepositoryUrl>https://github.com/CalvinAllen/dotnet-exec</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>exec, tool, run</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Title>dotnet exec</Title>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="nupkg\**" />
+	  <EmbeddedResource Remove="nupkg\**" />
+	  <None Remove="nupkg\**" />
+	  <None Update=".dotnet">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Spectre.Console" Version="0.43.0" />
+  </ItemGroup>
+
+</Project>
